@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-server/
+.env*
+!.env.example
+*.tsbuildinfo
+test-results/
+.playwright-cli/
+.codex-pptx-build/
+.vercel/
+output/
+/*.png
+/*.jpg

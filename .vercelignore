@@ -1,0 +1,13 @@
+.git
+.env*
+!.env.example
+node_modules
+dist
+dist-server
+output
+.codex-pptx-build
+.playwright-cli
+test-results
+*.tsbuildinfo
+/*.png
+/*.jpg

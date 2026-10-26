@@ -1,0 +1,14 @@
+**
+!package.json
+!package-lock.json
+!tsconfig.json
+!vite.config.ts
+!vitest.config.ts
+!index.html
+!src/
+!src/**
+!server/
+!server/**
+!public/
+!public/**
+!Dockerfile

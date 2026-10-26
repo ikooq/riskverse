@@ -1,0 +1,4 @@
+.audit-save-status{max-width:390px;line-height:1.6;overflow-wrap:anywhere}
+.audit-save-status.save-error{color:#ffac90}
+.audit-topbar button:disabled{opacity:.45;cursor:default}
+@media(max-width:850px){.audit-save-status{max-width:none}}

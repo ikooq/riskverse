@@ -1,0 +1,10 @@
+import {it,expect} from 'vitest';
+import {positionAt,simulate} from './simulation';
+const a={path:[{x:0,y:5},{x:10,y:5}],speed:1,delay:0};
+const b={path:[{x:5,y:0},{x:5,y:10}],speed:1,delay:0};
+it('finds exact closest approach and threshold interval between vertices',()=>{const r=simulate(a,b,Math.SQRT2);expect(r.minDistance).toBeCloseTo(0);expect(r.closestAt).toBeCloseTo(5);expect(r.windows).toHaveLength(1);expect(r.windows[0].start).toBeCloseTo(4);expect(r.windows[0].end).toBeCloseTo(6)});
+it('changes encounters when start delay changes without changing geometry',()=>{expect(simulate(a,{...b,delay:5},1).windows).toHaveLength(0)});
+it('keeps participants at endpoints before start and after completion',()=>{expect(positionAt({...a,delay:3},1)).toEqual(a.path[0]);expect(positionAt(a,100)).toEqual(a.path[1])});
+it('handles duplicate vertices and stationary actors',()=>{const stationary={path:[{x:5,y:5},{x:5,y:5}],speed:1,delay:0};const r=simulate(stationary,a,1);expect(r.minDistance).toBeCloseTo(0);expect(r.windows[0]).toEqual({start:4,end:6});expect(positionAt(stationary,8)).toEqual({x:5,y:5})});
+it('detects a near miss shorter than a frame',()=>{const r=simulate({...a,speed:5},{...b,speed:5},.01);expect(r.windows).toHaveLength(1);expect(r.windows[0].end-r.windows[0].start).toBeLessThan(.016)});
+it('reports proximity even when both routes have zero length',()=>{const still={path:[{x:1,y:1},{x:1,y:1}],speed:1,delay:0};expect(simulate(still,still,1).windows).toEqual([{start:0,end:0}])});
