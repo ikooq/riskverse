@@ -11,6 +11,7 @@
     "start": "node dist-server/start.js",
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest run",
+    "verify": "npm test && npm run build && node scripts/check-build-secrets.mjs",
     "api": "tsx server/index.ts"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 import {execFileSync} from 'node:child_process';
 try{process.loadEnvFile('.env.local')}catch(error){if(error.code!=='ENOENT')throw error}
-const keys=[process.env.GEMINI_API_KEY,process.env.OPENAI_API_KEY].filter(value=>value&&value.length>12);
+const keys=['GEMINI_API_KEY','OPENAI_API_KEY','UPSTASH_REDIS_REST_TOKEN','KV_REST_API_TOKEN','RISKVERSE_ACCESS_CODE'].map(name=>process.env[name]).filter(value=>value&&value.length>=8);
 const files=execFileSync('git',['diff','--cached','--name-only','-z']).toString().split('\0').filter(Boolean);
 for(const file of files){
  if(/(^|\/)(?:\.env(?:\.|$)|node_modules\/|output\/|\.vercel\/)/.test(file)&&file!=='.env.example')throw Error(`Private or generated path staged: ${file}`);
