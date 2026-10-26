@@ -1,0 +1,131 @@
+{
+  "evaluatedAt": "2026-10-26T15:21:02.897Z",
+  "apiBase": "http://127.0.0.1:8789",
+  "method": "Live API requests. Visible references recorded before results; no expert ground truth or accuracy claim.",
+  "cases": [
+    {
+      "id": "forklift-warehouse",
+      "file": "forklift-warehouse.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Forklift.JPG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Forklift.JPG",
+      "author": "Marketing Team / Sa'ad Jafar",
+      "license": "Public domain",
+      "visibleReference": "Погрузчик с оператором в синей каске, поднятая паллета с коробками, стеллажи по обе стороны. Другого пешехода на снимке не видно. По фото неизвестны движение техники и правила работы с грузом.",
+      "httpStatus": 502,
+      "durationMs": 35752,
+      "requestBytes": 186335,
+      "code": "PROVIDER_ERROR",
+      "error": "Сервис AI вернул ошибку. Повторите позже."
+    },
+    {
+      "id": "warehouse-goods",
+      "file": "warehouse-goods.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Warehouse_goods.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Warehouse_goods.jpg",
+      "author": "ProjectManhattan",
+      "license": "CC0 1.0",
+      "visibleReference": "Фронтальный вид стеллажей с паллетами и упакованными товарами; человек и погрузчик не видны. Пол и маршруты почти не показаны: нельзя заключить, что проход перекрыт.",
+      "httpStatus": 200,
+      "durationMs": 13690,
+      "requestBytes": 3481867,
+      "provider": "gemini",
+      "model": "gemini-3.1-flash-lite",
+      "analyzedAt": "2026-10-26T15:20:53.632Z",
+      "report": {
+        "summary": "На изображении показан многоуровневый складской стеллаж, полностью заполненный паллетами с упакованными товарами. Конструкция выглядит упорядоченной.",
+        "limitations": [
+          "Изображение демонстрирует только часть стеллажной системы, другие участки склада не видны.",
+          "Невозможно оценить целостность упаковки или стабильность грузов на паллетах.",
+          "Отсутствует информация о состоянии напольного покрытия и безопасности проходов в данной зоне."
+        ],
+        "observations": [
+          {
+            "id": "racks_full_view",
+            "label": "Многоуровневые стеллажи",
+            "kind": "rack",
+            "region": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 1
+            },
+            "concern": "context",
+            "visibleEvidence": "Стеллажная система заполнена паллетами на нескольких ярусах.",
+            "uncertainty": "Невозможно оценить общее состояние конструкций или соблюдение норм нагрузки.",
+            "recommendation": "Провести регулярный плановый осмотр стеллажей на предмет повреждений и соответствия паспортным нагрузкам."
+          },
+          {
+            "id": "pallets_bulk",
+            "label": "Паллеты с товаром",
+            "kind": "pallet",
+            "region": {
+              "x": 0.02,
+              "y": 0.1,
+              "w": 0.98,
+              "h": 0.85
+            },
+            "concern": "context",
+            "visibleEvidence": "Множество паллет, обернутых стрейч-пленкой, размещены на полках.",
+            "uncertainty": "Неизвестно, насколько надежно зафиксированы грузы и не выступают ли они за габариты полок.",
+            "recommendation": "Проверить визуально, нет ли деформированных паллет или грузов, выходящих за границы стеллажей."
+          }
+        ]
+      }
+    },
+    {
+      "id": "worker-workshop",
+      "file": "worker-workshop.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Worker_adjusts_machinery_in_a_workshop.jpg",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Worker_adjusts_machinery_in_a_workshop.jpg/1280px-Worker_adjusts_machinery_in_a_workshop.jpg",
+      "author": "Nenad Stojković / Shixart1985",
+      "license": "CC BY 2.0, https://creativecommons.org/licenses/by/2.0/",
+      "visibleReference": "Крупный план рабочего с инструментом у станка, видны рука, детали и синий спиральный шланг. Не видны лицо, общий план помещения или состояние питания станка. Нельзя утверждать, что механизм включён или маршрут перекрыт.",
+      "httpStatus": 200,
+      "durationMs": 9255,
+      "requestBytes": 234839,
+      "provider": "gemini",
+      "model": "gemini-3.1-flash-lite",
+      "analyzedAt": "2026-10-26T15:21:02.891Z",
+      "report": {
+        "summary": "Изображение демонстрирует работу сотрудника с промышленным оборудованием вблизи движущихся частей.",
+        "limitations": [
+          "Изображение обрезано, не видна вся рабочая зона.",
+          "Невозможно определить, находится ли оборудование в рабочем или выключенном состоянии.",
+          "Отсутствует информация о средствах индивидуальной защиты, таких как перчатки, которые могут быть необходимы."
+        ],
+        "observations": [
+          {
+            "id": "person_01",
+            "label": "Сотрудник",
+            "kind": "person",
+            "region": {
+              "x": 0,
+              "y": 0,
+              "w": 0.584,
+              "h": 1
+            },
+            "concern": "context",
+            "visibleEvidence": "Человек взаимодействует с деталями оборудования.",
+            "uncertainty": "Неясно, обучен ли сотрудник работе с данным оборудованием и соблюдает ли он протоколы безопасности.",
+            "recommendation": "Проверить наличие у сотрудника допуска к работе с оборудованием."
+          },
+          {
+            "id": "machine_part_01",
+            "label": "Движущиеся части станка",
+            "kind": "other",
+            "region": {
+              "x": 0.2213,
+              "y": 0,
+              "w": 0.7787,
+              "h": 0.9994
+            },
+            "concern": "potential_hazard",
+            "visibleEvidence": "Рука сотрудника находится в непосредственной близости от направляющих и движущихся элементов станка.",
+            "uncertainty": "Неясно, отключено ли питание оборудования и установлены ли необходимые защитные кожухи.",
+            "recommendation": "Проверить наличие защитных кожухов и регламент безопасной эксплуатации оборудования при ручной настройке."
+          }
+        ]
+      }
+    }
+  ]
+}

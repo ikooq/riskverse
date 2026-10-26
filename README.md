@@ -2,6 +2,8 @@
 
 Интерактивная лаборатория производственных рисков на React, TypeScript и Three.js с Gemini Vision. Поддерживает локальный Node.js сервер и бесплатное демонстрационное размещение на Vercel Hobby.
 
+Публичный сайт: [riskverse.vercel.app](https://riskverse.vercel.app). Код публикуется в [ikooq/riskverse](https://github.com/ikooq/riskverse); production-ветка — `codex/launch`. Работоспособность новых AI-запросов зависит от серверного ключа и доступной квоты Gemini. Сохранённый пример открывается без нового обращения к провайдеру.
+
 ## Запуск
 
 Требуется Node.js 22.22+.
