@@ -195,6 +195,11 @@ main { max-width: 1760px; margin: 0 auto; padding: 22px 34px 34px; }
 .ai-observation { padding: 13px; border: 1px solid #dfeae3; border-radius: 11px; color: #284137; background: #fbfdfb; }
 .ai-observation p, .ai-observation small { color: #687b71; }
 .ai-observation .potential-hazard { color: #a24d40; }
+.ai-review .ai-summary b { color: #1d3b31; font-weight: 650; }
+.ai-review .ai-summary p { color: #556b60; }
+.ai-review .ai-observation b { color: #1d3b31; font-weight: 650; }
+.ai-review .ai-observation p strong { color: #2f5a48; font-weight: 650; }
+.ai-review > p, .ai-review .ai-cache-label, .ai-review .ai-heading p, .ai-review .ai-model { color: #5d7266; }
 .ai-actions { gap: 9px; }
 .ai-consent { padding: 11px; border: 1px solid #e0ebe5; border-radius: 9px; background: #f7faf8; font-size: 11px; }
 .ai-model { font-size: 10px; }
@@ -373,3 +378,17 @@ footer button:hover { color: var(--green); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* Contrast fixes for the light theme: text that kept dark-theme colors (2026-11-13). */
+.workspace-tabs button span { color: #6f8579; }
+.floor-entry b { color: #1d3b31; }
+.floor-entry p { color: #5d7266; }
+.photo-confirm span { color: #5d7266; }
+.photo-links button small { color: #6a7f73; }
+.route-drawing .section-heading h3 { color: #1d3b31; }
+.route-drawing .section-heading span { color: #5d7266; }
+.experiment-heading .eyebrow, .solution-heading .eyebrow, .comparison > .eyebrow { color: #5f8a52; }
+.finding-number { color: #6a7f73; }
+.comparison .comparison-verdict { color: #4f665a; }
+.comparison-groups summary.neutral { color: #4f665a; }
+.comparison-groups li span { color: #5d7266; }
