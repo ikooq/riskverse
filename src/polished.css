@@ -392,3 +392,14 @@ footer button:hover { color: var(--green); }
 .comparison .comparison-verdict { color: #4f665a; }
 .comparison-groups summary.neutral { color: #4f665a; }
 .comparison-groups li span { color: #5d7266; }
+
+/* New-audit dialog: light theme labels and inputs (2026-11-13). */
+.new-audit .eyebrow { color: #5f8a52; }
+.new-audit > p, .new-audit > small { color: #5d7266; }
+.new-audit label { color: #4f665a; }
+.new-audit input, .new-audit select { color: #17342b; background: #f7faf8; border: 1px solid #cfdcd4; }
+.new-audit input:focus-visible, .new-audit select:focus-visible { outline: 2px solid #1a6a55; outline-offset: 1px; }
+.new-audit input:not([hidden]) { color: #17342b; background: #f7faf8; border-color: #cfdcd4; }
+.floor-modal .floor-instruction { color: #1d3b31; background: #eef6e6; border-color: #c9ddbd; }
+.floor-modal .floor-dimensions label { color: #4f665a; }
+.floor-modal .floor-dimensions input { color: #17342b; background: #f7faf8; border-color: #cfdcd4; }
