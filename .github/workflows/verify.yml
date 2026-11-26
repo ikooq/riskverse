@@ -1,7 +1,7 @@
 name: Verify RISKVERSE
 on:
   push:
-    branches: [codex/launch]
+    branches: [main]
   pull_request:
 permissions:
   contents: read
