@@ -12,6 +12,6 @@ export default defineConfig(({mode,isSsrBuild})=>{
     server.middlewares.use('/api',(req,res)=>{req.url='/api'+req.url;void handler(req,res)});
    },
   }],
-  build:isSsrBuild?{target:'node22'}:{rollupOptions:{output:{manualChunks:{three:['three']}}}},
+  build:isSsrBuild?{target:'node22'}:{rollupOptions:{output:{manualChunks:(id:string)=>id.includes('/node_modules/three/')?'three':undefined}}},
  };
 });
